@@ -1,0 +1,41 @@
+// fetch("https://v3.football.api-sports.io/players/topscorers?season=2018&league=61", {
+//     "headers": {
+//         "x-rapidapi-host": "v3.football.api-sports.io",
+//         "x-rapidapi-key": "abb41e072c1003b5e3f2d7d0f828ec08"
+//     }
+// })
+//     .then(response => response.json())
+//     .then(json => { printTopGoals(json.results) })
+//     .then(response => console.log(response))
+//     .catch(err => console.error(err));
+
+//     console.log(player.name)
+
+
+// function printTopGoals(jugadores) {
+//     const main = document.getElementById('main')
+//     jugadores.forEach(players => {
+//         main.innerHTML = `
+//         <img src="${players.player.photo}" >`
+//     })
+// }
+
+
+        // data.response.forEach(element => {
+        // console.log(element.player.name)
+        // console.log(element.statistics[0].goals.total)
+        // console.log(element.player.photo)
+
+        ASISTENCIAS
+
+        let content = document.createElement("div")
+        content.className = "container";
+        content.innerHTML =
+            ` <h3>${element.player.name}</h3>
+            <h4>${element.player.nationality}Nacionalidad</h4>
+            <h5>${element.player.date}</h5>
+        <img src="${element.player.photo}" alt="${element.player.name}">
+        <h3>Asistencias ${element.statistics[0].goals.assists}⚽  🏟️${element.statistics[0].games.appearences}</h3>
+            <h4>${element.statistics[0].league.flag}Liga${element.statistics[0].league.logo}</h4> `
+
+        main.appendChild(content)
